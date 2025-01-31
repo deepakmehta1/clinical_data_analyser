@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "clinical-data-analyser"
+version = "0.1.0"
+description = ""
+authors = ["deepakmehta1 <deepak.deep40@yahoo.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+langgraph = "^0.2.69"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
