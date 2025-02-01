@@ -1,15 +1,22 @@
 # tools.py
 from langchain_core.tools import tool
+from core.hcc_relevance_check import check_hcc_relevance
+from config import settings
 
 
 @tool
-def get_product_details(product_name: str):
-    """Gathers basic details about a product."""
-    details = {
-        "smartphone": "A cutting-edge smartphone with advanced camera features and lightning-fast processing.",
-        "coffee": "A rich, aromatic blend of ethically sourced coffee beans.",
-        "shoes": "High-performance running shoes designed for comfort, support, and speed.",
-        "headphones": "Wireless headphones with advanced noise cancellation technology for immersive audio.",
-        "speaker": "A voice-controlled smart speaker that plays music, sets alarms, and controls smart home devices.",
-    }
-    return details.get(product_name, "Product details not found.")
+def check_hcc_relevance_tool(conditions: list) -> list:
+    """
+    A tool to check HCC relevance for extracted conditions.
+
+    Args:
+        conditions (list): List of extracted conditions from progress notes.
+
+    Returns:
+        list: A list of conditions with associated HCC codes.
+    """
+    # Use the HCC relevance check function from core
+    hcc_codes_path = settings.HCC_CODES_PATH
+    relevant_conditions = check_hcc_relevance(conditions, hcc_codes_path)
+
+    return relevant_conditions

@@ -1,8 +1,0 @@
-{
-    "name": "clinical_data_analyser",
-    "version": "1.0.0",
-    "description": "A web app for clinical data analysis using LangGraph",
-    "main": "app/main.py",
-    "dev": true  
-  }
-  
