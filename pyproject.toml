@@ -6,8 +6,11 @@ authors = ["deepakmehta1 <deepak.deep40@yahoo.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.13"
+python = ">=3.9,<3.13"
 langgraph = "^0.2.69"
+google-cloud-aiplatform = {extras = ["langchain"], version = "^1.79.0"}
+python-dotenv = "^1.0.1"
+black = "^25.1.0"
 
 
 [build-system]
