@@ -12,6 +12,7 @@ google-cloud-aiplatform = {extras = ["langchain"], version = "^1.79.0"}
 python-dotenv = "^1.0.1"
 black = "^25.1.0"
 pandas = "^2.2.3"
+langchain-openai = "^0.3.3"
 
 
 [build-system]
